@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/produto/{id?}/roupas', function($id = ''){
+    return "Produto: {$id}";
+});
+
+Route::get('/passagem/{id}', function($id){
+    return "Codigo do produto: {$id}";
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
